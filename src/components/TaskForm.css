@@ -1,5 +1,6 @@
 .taskform{
     width: 40%;
+    margin-left: 20px;
 }
 
 .task_input {
@@ -41,7 +42,7 @@
 .task_submit{
     font-size: 16px;
     font-weight: 700;
-     background-color: #6457f9;
+     background-color: #8C50CE;
      color: white;
      border-radius: 5px;
      height: 40px;

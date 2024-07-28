@@ -1,6 +1,7 @@
 import "./TaskForm.css";
 import Tag from "./Tag";
 import { useState } from "react";
+import TaskAura from "../assets/TaskAuraLogo.png";
 
 function TaskForm({setTasks}){
 
@@ -82,6 +83,9 @@ function TaskForm({setTasks}){
 
     return (
         <div className="app_header">
+        <div className="project_logo">
+            <img src={TaskAura} />
+        </div>
         <form className="taskform" onSubmit={handleSubmit}>
             <input type="text" className="task_input" placeholder="Enter your task" name="task" onChange={handleChange} value={taskData.task} />
             <div className="task_form_bottom_section">
