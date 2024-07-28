@@ -38,17 +38,17 @@
     transition: all 0.3s ease-in-out;
 }
 
-.task_delete:hover{
-    background-color: #ebebeb;
-}
+
 
 .delete_icon{
     width: 20px;
-    opacity: 50%;
+    opacity: 80%;
     transition: all 0.3s ease-in-out;
     
 }
 
 .task_delete:hover{
-    opacity: 80%;
+    opacity: 100%;
+    background-color: #ebebeb95;
+    
 }
