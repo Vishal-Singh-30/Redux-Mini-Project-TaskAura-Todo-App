@@ -1,5 +1,5 @@
 .task_column_icon{
-    width: 30px;
+    width: 80px;
     margin-right: 5px;
     
 }
@@ -10,5 +10,6 @@
 }
 
 .task_column{
+    font-size: 20px;
     border-radius: 14px;
 }
