@@ -12,6 +12,8 @@
   align-items: start;
   justify-content: space-evenly;
   padding: 20px 8%;
+  border-bottom: 2px solid #ebebeb;
+  margin-bottom: 20px;
 }
 
 .task_column{
