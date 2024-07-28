@@ -2,8 +2,13 @@
 
 TaskAura is a modern and efficient todo application built using React and Vite. It helps users manage their daily tasks by providing a user-friendly interface to add, edit, delete, and organize tasks.
 
+<<<<<<< HEAD
 ![Project Picture](./TaskAura%20Project%20Pic%201.png)
 ![Project Picture](./TaskAura%20Project%20Pic%202.png)
+=======
+![Project Image](./TaskAura-Project-Pic-1.png)
+![Project Image](./TaskAura-Project-Pic-2.png)
+>>>>>>> 616f9bd5189c69a22fcd7bc4a458f37b1082cb8c
 
 ## Table of Contents
 - [Installation](#installation)
