@@ -50,6 +50,7 @@ This will start the development server, and you can view the application in your
 - Delete tasks
 - Mark tasks as completed
 - Organize tasks using tags and columns
+- **Drag and drop** tasks to reorder them
 
 ## Components
 The application is composed of the following key components:
