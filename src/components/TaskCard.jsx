@@ -1,6 +1,6 @@
 import "./TaskCard.css";
 import Tag from "./Tag";
-import deleteIcon from "../assets/Delete.png";
+import deleteIcon from "/src/assets/Delete.png";
 
 
 function TaskCard({title, tags, handleTaskDelete, index, setActiveCard}) {
