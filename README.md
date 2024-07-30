@@ -7,6 +7,7 @@ You can check out the live version of the project [TaskAura by Vishal Singh](htt
 
 ![Project Picture](./TaskAura%20Project%20Pic%201.png)
 ![Project Picture](./TaskAura%20Project%20Pic%202.png)
+![Project Picture](./TaskAura%20Project%20Pic%203.png)
 
 ## Table of Contents
 - [Installation](#installation)
