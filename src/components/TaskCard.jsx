@@ -3,9 +3,9 @@ import Tag from "./Tag";
 import deleteIcon from "../assets/Delete.png";
 
 
-function TaskCard({title, tags, handleTaskDelete, index}) {
+function TaskCard({title, tags, handleTaskDelete, index, setActiveCard}) {
     return (
-        <div className="task_card">
+        <div className="task_card" draggable="true" onDragStart={()=> setActiveCard(index)} onDragEnd={()=> setActiveCard(null)}>
             <p className="task_text">{title}</p>
 
             <div className="task_card_bottom_section">

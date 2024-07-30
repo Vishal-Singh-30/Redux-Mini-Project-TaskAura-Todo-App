@@ -13,6 +13,8 @@ console.log(oldTasks);
 
 function App(){
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
+  // usestate for Draggable card -> active card 
+  const [activeCard, setActiveCard] = useState(null);
 
   useEffect(()=>{
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -24,15 +26,28 @@ function App(){
     setTasks(newTasks);
   }
 
-  console.log("task", tasks);
+  const onDrop = (status, position)=> {
+    console.log(`active card -: ${activeCard} going to ,status - : ${status}, at index ${position}`);
+    if(activeCard== null || activeCard === undefined) return;
+
+    const taskToMove = tasks[activeCard];
+    const updatedTasks = tasks.filter((task, index)=> index !== activeCard);
+
+    updatedTasks.splice(position, 0, {
+      ...taskToMove, 
+      status: status
+    });
+    setTasks(updatedTasks);
+  };
+
   return (
   <div className="app">
     {/* app_header - TaskForm */}
     <TaskForm setTasks={setTasks}/>
     <div className="app_main">
-      <TaskColumn title="To do" icon={todoIcon} tasks={tasks} status="todo" handleTaskDelete= {handleTaskDelete}/>
-      <TaskColumn title="Doing" icon={doingIcon} tasks={tasks} status="doing" handleTaskDelete= {handleTaskDelete}/>
-      <TaskColumn title="Done"  icon={doneIcon} tasks={tasks} status="done"handleTaskDelete= {handleTaskDelete} />
+      <TaskColumn title="To do" icon={todoIcon} tasks={tasks} status="todo" handleTaskDelete= {handleTaskDelete} setActiveCard = {setActiveCard} onDrop={onDrop} />
+      <TaskColumn title="Doing" icon={doingIcon} tasks={tasks} status="doing" handleTaskDelete= {handleTaskDelete} setActiveCard = {setActiveCard} onDrop={onDrop} />
+      <TaskColumn title="Done"  icon={doneIcon} tasks={tasks} status="done"handleTaskDelete= {handleTaskDelete} setActiveCard = {setActiveCard} onDrop={onDrop} />
     </div>
   </div>
 )}
